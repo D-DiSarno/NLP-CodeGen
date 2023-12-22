@@ -7,8 +7,8 @@ from datasets import Dataset
 from utils import evaluator as e
 
 tokenizer = AutoTokenizer.from_pretrained(
-        # "Helsinki-NLP/opus-mt-en-nl",
-        "google/flan-t5-base",
+        "Helsinki-NLP/opus-mt-en-nl",
+        # "google/flan-t5-base",
         use_fast=True)
 
 
