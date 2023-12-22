@@ -41,8 +41,8 @@ def train():
     train_dataset = Dataset.from_pandas(train_df)
     val_dataset = Dataset.from_pandas(val_df)
 
-    # model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-nl")
-    model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-base")
+    model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-nl")
+    # model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-base")
     evaluator = e.CodeGenerationEvaluator(tokenizer, device, smooth_bleu=True)
 
     batch_size = 1
