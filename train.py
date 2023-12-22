@@ -35,8 +35,8 @@ def train():
 
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
-    train_df = pd.read_csv('CoNaLa-Large/train.csv')
-    val_df = pd.read_csv('CoNaLa-Large/val.csv')
+    train_df = pd.read_csv('DJANGO/train.csv')
+    val_df = pd.read_csv('DJANGO/val.csv')
 
     train_dataset = Dataset.from_pandas(train_df)
     val_dataset = Dataset.from_pandas(val_df)
