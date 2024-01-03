@@ -25,12 +25,6 @@ def map_to_encoder_decoder_inputs(batch):
     batch["labels"] = outputs.input_ids.copy()
     batch["decoder_attention_mask"] = outputs.attention_mask
 
-    """
-    # complicated list comprehension here because pad_token_id alone is not good enough to know whether label should be excluded or not
-    batch["labels"] = [
-        [-100 if mask == 0 else token for mask, token in mask_and_tokens] for mask_and_tokens in [zip(masks, labels) for masks, labels in zip(batch["decoder_attention_mask"], batch["labels"])]
-    ]
-    """
     assert all([len(x) == encoder_length for x in inputs.input_ids])
     assert all([len(x) == decoder_length for x in outputs.input_ids])
 
@@ -107,7 +101,7 @@ def train():
         per_device_train_batch_size=batch_size,
         per_device_eval_batch_size=batch_size,
         predict_with_generate=True,
-        num_train_epochs=0.001,
+        num_train_epochs=12,
         do_train=True,
         do_eval=True,
         fp16=False,#set True if cuda

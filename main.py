@@ -14,7 +14,7 @@ while True:
     elif action == 1:
         test()
         break
-    elif action == 3:
+    elif action == 2:
         eval()
         break
     else:

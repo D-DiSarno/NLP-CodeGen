@@ -6,9 +6,9 @@ from datasets import Dataset
 
 #device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 device = torch.device('cpu')  # Use CPU
-new_tokenizer = AutoTokenizer.from_pretrained("DJANGO-training/checkpoint-12", use_fast=True)
+new_tokenizer = AutoTokenizer.from_pretrained("DJANGO-training/checkpoint-79996", use_fast=True)
 evaluator = e.CodeGenerationEvaluator(new_tokenizer, device, smooth_bleu=True)
-new_model = AutoModelForSeq2SeqLM.from_pretrained("DJANGO-training/checkpoint-12")
+new_model = AutoModelForSeq2SeqLM.from_pretrained("DJANGO-training/checkpoint-79996")
 
 
 # map data correctly
