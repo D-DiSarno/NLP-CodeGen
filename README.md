@@ -19,6 +19,7 @@ Nel file main.py, viene richiesto di inserire un numero corrispondente all'azion
 - 0 per l'addestramento
 - 1 per il testing
 - 2 per la valutazione del modello
+- 3 per avere una demo delle risposte del modello
 
 ## Avvio dell'addestramento con GPU
 Per avviare l'addestramento con accelerazione sulla GPU bisogna eseguire la sequente modifica:
