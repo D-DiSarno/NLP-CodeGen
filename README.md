@@ -1,4 +1,4 @@
-# Progetto NLP Code Generator
+# Progetto NLP Code Generator -
 
 Questo progetto utilizza il dataset Django per addestrare un modello di linguaggio naturale attraverso la libreria Transformers. Il modello apprende a generare codice Python in risposta a input di linguaggio naturale.
 
